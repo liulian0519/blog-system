@@ -4,53 +4,12 @@
 		<meta charset="UTF-8">
 		<title>前端分类</title>
 		<link rel="stylesheet" href="css/qianduan.css" />
+		<link rel="stylesheet" href="css/init.css" />
 		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
 		<script type="text/javascript" src="js/template.js" ></script>
 	<script type="text/javascript" src="js/input.js" ></script>
 		<script type="text/javascript" src="js/blog-nav.js"></script>
-		<style type="text/css">
-			.blog-artic p{
-				font-size: 20px;
-				color: #333333;
-				margin-top: 16px;
-				margin-bottom: 16px;
-				margin-left: 16px;
-				overflow: hidden;
-				white-space: nowrap;  
-    			text-overflow: ellipsis;
-			}
-			.blog-artic span{
-				font-size:16px;
-				color: #5A5A5A;
-				margin-bottom: 16px;
-			
-			}
-			.card{
-				border: 1px solid white;
-				background: white;
-				height: 88px;width: 336px;
-			}
-			.typer{
-				margin-left: 16px;
-			}
-			.date{
-				margin-left: 16px;
-			}
-			
-			.date:before{
-				content: "";
-				padding: 1px 9px;
-				margin: 1px 9px;
-				background:url(img/time.png) no-repeat;
-			}
-			#pps{
-				width: 336px;
-				height: 232px;
-				margin-top: 48px;
-				display: block;
-			}
-		
-		</style>
+	
 		<script type="text/html" id="arttep">
 			{{each result as value}}
 			<a href="article.html?{{value.id}}">
