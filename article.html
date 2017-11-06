@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<title>博文详情</title>
+<link rel="stylesheet" type="text/css" href="css/blog_word.css">
+<script type="text/javascript" src ="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/blog_word0.js"></script>
+
+</head>
+<body>
+    <!-- 文章页面的导航栏部分 -->
+	<div id="article_nav" style="">
+		
+		    <!-- 主站的logo -->
+			<div id="logo" style="">
+			<img id="logo_img1" src="images/logo-n.png">
+			<img id="logo_img2" src="images/logo-s.png">
+		    </div>
+		    <!-- 搜索框 -->
+		     <div id="search">
+              	<input type="text" id="search_input" placeholder="搜索"  style="outline:none;width: 240px;height: 32px;  padding-left: 16px;"></input>
+              	<input type="text" id="search_input2" placeholder="搜索"  style="outline:none;display: none;width: 220px;height: 25px; padding-left: 16px;"></input>
+              	<img id="search_img" src="images\search-n.png">
+                
+             </div>
+             <img id="search_btn" style="position: absolute;top: 30px;right: 110px;" src="images\search-s.png"><!-- 搜索框里面的搜索按钮 -->
+             <!-- 所有超链 -->
+		    <div id="nav-fenlei" style="">
+		      <div id="zhuzhan"><a href="index.html">主站</a></div>
+              <div id="jishu">技术</div>
+              <div id="chanpinsheji"><a href="CPdesign.html">产品设计</a></div>
+              <div id="chanpinyunying"><a href="cpyunying.html">产品运营</a></div>
+              <div id="tuanduixiangguan"><a href="Team.html">团队相关</a></div>
+              <div id="bokefenlei">分类</div>
+            </div>
+            <!-- 超链下方的下滑线 -->
+            <div id="nav_xiahuaxian" style="display:none; position: absolute;top:68px;right: 884px;height:1px;border-top:6px solid #5a5a5a;width: 32px;"></div>
+            <!-- 屏幕小于1296时重新给出下划线 -->
+            <div id="nav_xiahuaxian2" style="display:none;position: absolute;top:68px;right: 172px;height:1px;border-top:6px solid #5a5a5a;width: 32px;"></div>
+            <!-- 隐藏的菜单栏 -->
+           <div id="jishu_caidan" style="display:none;width: 96px;height: 150px;background-color: #fafafa;position: absolute;top:51px;right: 755px;font-size: 16px;color: #333333">
+              <div style="margin-left:32px; margin-top: 16px;height:1px;border-top:6px solid #5a5a5a;width: 32px;"></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="qianduan.html">前端</a></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="houduan.html">后端</a></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="JYshare.html">经验分享</a></div>
+           </div> 
+
+           <div id="fenlei_caidan" style="display:none;width: 96px;height: 250px;background-color: #fafafa;position: absolute;top:51px;right: 57px;font-size: 16px;color: #333333">
+              <div style="margin-left:32px; margin-top: 16px;height:1px;border-top:6px solid #5a5a5a;width: 32px;"></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="">前端</a></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="">后端</a></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="">经验分享</a></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="">产品设计</a></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="">产品运营</a></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="">团队相关</a></div>
+           </div> 
+	</div>
+
+	<!-- 文章页面的头图及标题部分 -->
+	<div id="toutubiaoti" style="background-position: center;background-size:100% 100%;">
+		
+	</div>
+  <div id="textt" style="font-size: 30px;color: red;"></div>
+	<!-- 文章正文部分 -->
+	<div id="zhengwen" style="padding-top: 20px;">
+		
+	</div>
+    <!-- 文章页面分享部分 -->
+	<div id="fenxiang" style="">
+		<div style="font-size: 20px;color: #333333;font-weight: bold;">分享</div>
+		<div style="margin-top: 16px;">
+			       <a id="qqshare" title='分享到QQ空间' href=""><img src="images/share-qzone.png"></a>
+             <a id="wbshare" title='分享到新浪微博' href=""><img src="images/share-weibo.png"></a>
+             <a id="wxshare" href="javascript:"><img src="images/share-qr.png"></a>
+
+              <!-- JiaThis Button BEGIN -->
+              <div id="ckepop" style="display: none">
+                  <a class="jiathis_button_weixin" style=""></a> 
+                  <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1" charset="utf-8">
+                 </script>
+             </div> <!-- JiaThis Button END -->
+           
+		</div>
+	</div>
+
+    <!-- 文章页面的评论表单 -->
+	<div id="pinglun" flag="0" style="">
+	   <form id="form_pinglun">
+		  <div style="font-size: 20px;color: #333333;font-weight: bold;margin-bottom: 16px;">评论</div>
+		  <input id="input_ar_id" style="display: none" type="text" name="id" value="1"></input>
+         
+         <input id="pinglun_input1" name="name" type="text" placeholder=" 昵称" style=""></input>
+         <input id="pinglun_input2" name="mail" type="text" placeholder=" 邮箱" style=""></input>
+      
+           <textarea id="pinglun_input3" name="word"  style="margin-bottom: 16px;resize: none;"></textarea>
+          
+            <span style="font-size: 12px;color: #5a5a5a; line-height: 20px;">向我发送评论通知  是</span>
+            <input id="radio" type="radio" name="flog" checked="checked" value="1" style="margin:0;height:13px;"></input>
+            <span style="font-size: 12px;color: #5a5a5a; line-height: 15px;">否</span>
+            <input id="radio" type="radio" name="flog"  value="2" style="margin:0;height:13px;"></input>
+
+         <input id="pinglun_btn" type="button"  value="评论"></input>
+         <span id="textarea_zishu" style="font-size: 12px;color: #5a5a5a;float: right;line-height: 20px;margin-right: 16px;">0/1000</span>
+         
+      
+        </form>
+	</div> 
+
+	<!-- 留言部分 -->
+	<div id="liuyanban_box" style="">
+
+	    
+	  
+    </div>
+
+    <!-- 网页的页尾 -->
+	<div id="footer" style="">
+		<p>2012-2017 Creatshare.All rights reserved.</p>
+	</div>
+</body>
+</html>

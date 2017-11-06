@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title>博客首页</title>
+		<link rel="stylesheet" href="css/article.css" />
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+		<script type="text/javascript" src="js/template.js" ></script>
+		
+	
+		<script type="text/javascript" src="js/input.js" ></script>
+		<script type="text/javascript" src="js/home-page.js"></script>
+		<style type="text/css">
+			
+			.blog-artic p{
+				font-size: 20px;
+				color: #333333;
+				margin-top: 16px;
+				margin-bottom: 16px;
+				margin-left: 16px;
+				overflow: hidden;
+				white-space: nowrap;  
+    			text-overflow: ellipsis;
+			}
+			.blog-artic span{
+				font-size:16px;
+				color: #5A5A5A;
+				margin-bottom: 16px;
+			}
+			.card{
+				border: 1px solid white;
+				background: white;
+				height: 88px;
+				width: 336px;
+				
+			}
+			.typer{
+				margin-left: 16px;
+				
+			}
+			.date{
+
+				margin-left: 100px;
+				display: inline-block;
+			}
+				.date:before{
+				content: "";
+				padding: 1px 9px;
+				margin: 1px 9px;
+				background:url(img/time.png) no-repeat;
+			}
+			
+			#pps{
+				width: 336px;
+				height: 232px;
+				margin-top: 48px;
+				display: block;
+			}
+		#search_input2{
+	border-radius: 25px;
+	/*background-color: #fff;*/
+	border: 1px solid #5a5a5a;
+	color: #5a5a5a;
+	font-size: 16px;
+}
+	#article_nav{
+		background-color: white;
+	}
+		
+		</style>
+		<!--模板引擎-->
+		<script type="text/html" id="arttep">
+	
+			{{each result as value}}
+				<a href="article.html?{{value.id}}">
+					<div class="blog-artic">
+						<img id="pps" src="{{value.url}}" />
+						<div class="card">
+							<p>{{value.title}}</p>
+						
+							<span class="typer">{{value.name}}</span>
+							<span class="date">{{value.time}}</span>
+						</div>
+					</div>
+				</a>
+			
+			{{/each}}
+		</script>
+	</head>
+	<body>
+		
+		 <!-- 文章页面的导航栏部分 -->
+	<div id="article_nav" style="">
+		
+		    <!-- 主站的logo -->
+			<div id="logo" style="">
+			<img id="logo_img1" src="img/logo-n.png">
+			<img id="logo_img2" src="img/logo-s.png">
+		    </div>
+		    <!-- 搜索框 -->
+		     <div id="search">
+              	<input type="text" id="search_input" name="keyword" placeholder="搜索" style="outline:none;width: 240px;height: 32px; padding-left: 16px;"></input>
+              	<input type="text" id="search_input2" placeholder="搜索" style="outline:none;display: none;width: 220px;height: 25px; padding-left: 16px"></input>
+              	<img id="search_img" src="img\search-n.png">
+             </div>
+              <img id="search_btn" style="position: absolute;top: 30px;right: 110px;" src="img\search-s.png"><!-- 搜索框里面的搜索按钮 -->
+             <!-- 所有超链 -->
+		    <div id="nav-fenlei" style="">
+		      <div id="zhuzhan"><a href="home-page.html">主站</a></div>
+              <div id="jishu">技术</div>
+              <div id="chanpinsheji"><a href="CPdesign.html">产品设计</a></div>
+              <div id="chanpinyunying"><a href="cpyunying.html">产品运营</a></div>
+              <div id="tuanduixiangguan"><a href="Team.html">团队相关</a></div>
+              <div id="bokefenlei">分类</div>
+            </div>
+            <!-- 超链下方的下滑线 -->
+            <div id="nav_xiahuaxian" style="display:none; position: absolute;top:68px;right: 884px;height:1px;border-top:6px solid #5a5a5a;width: 32px;"></div>
+            <!-- 屏幕小于1296时重新给出下划线 -->
+            <div id="nav_xiahuaxian2" style="display:none;position: absolute;top:68px;right: 172px;height:1px;border-top:6px solid #5a5a5a;width: 32px;"></div>
+            <!-- 隐藏的菜单栏 -->
+           <div id="jishu_caidan" style="display:none;width: 96px;height: 150px;background-color:white;position: absolute;top:51px;right: 755px;font-size: 16px;color: #333333">
+              <div style="margin-left:32px; margin-top: 16px;height:1px;border-top:6px solid #5a5a5a;width: 32px;"></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="qianduan.html">前端</a></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="houduan.html">后端</a></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="JYshare.html">经验分享</a></div>
+           </div> 
+
+           <div id="fenlei_caidan" style="display:none;width: 96px;height: 250px;background-color: #fafafa;position: absolute;top:51px;right: 57px;font-size: 16px;color: #333333">
+              <div style="margin-left:32px; margin-top: 16px;height:1px;border-top:6px solid #5a5a5a;width: 32px;"></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="qianduan.html">前端</a></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="houduan.html">后端</a></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="JYshare.html">经验分享</a></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="CPdesign.html">产品设计</a></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="CPdesign.html">产品运营</a></div>
+           	  <div style="text-align: center;margin-top: 16px;"><a href="Team.html">团队相关</a></div>
+           </div> 
+	</div>
+	
+	
+		<div class="blog-main">
+			<h3>最新文章</h3>
+			<div class="main-body">
+					
+				<div class="hh"  id="tet">
+					<!--填充在此-->
+				</div>
+	            <div class="load">
+	            	<button class="btn" id="but" onmouseover="change1();" onmouseout="change2()">加载更多</button>
+	            </div>
+            </div>
+
+		</div>
+		<div class="blog-foot">
+			<p>@2012-2017 Creatshare Allrights reserved.</p>
+		</div>
+
+	</body>
+	
+</html>

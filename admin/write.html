@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>提交页面</title>
+<link rel="stylesheet" type="text/css" href="css/write.css" />
+</head>
+<script type="text/javascript">
+String.prototype.trim = function()
+{
+   
+    return this.replace(/(^\s*)|(\s*$)/g, "");
+}
+</script>
+<body >
+
+    <img id="logo" src="images/logo-n.png"><span id="title" style="">发表博客</span>
+
+    <form id="form"  method="get" action="http://139.199.106.88:8080/blog_war/AddMessServlet">
+    <div><span>输入昵称:</span><input type="text" id="input_name" class="input" maxlength="12" name="name"></input><span id="name_after" style="color:red;font-size:12px;"><span></div>
+
+    <div><span>输入邮箱:</span><input type="text" id="input_mail" class="input" name="mail"></input><span id="mail_after" style="color:red;font-size:12px;"><span></div>
+
+    <div><span>文章标题:</span><input type="text" id="input_title" class="input" name="title"></input><span id="title_after" style="color:red;font-size:12px;"><span></div>
+
+    <input id="input_type" name="type" style="display: none;"></input>
+    <div><span>文章类型:</span><span id="article_type_head">请选择<img  src="images/article_type_select.png"></span></div>
+    <!-- 选择文章类型的隐藏菜单 -->
+    <div id="ar_type_menu" style="display:none;  width:210px;border:1px #C3CED9 solid;">
+    	<span class="article_type_span">前端</span>
+    	<span class="article_type_span">后端</span>
+    	<span class="article_type_span">经验分享</span>
+    	<span class="article_type_span">产品设计</span>
+    	<span class="article_type_span">产品运营</span>
+    	<span class="article_type_span">团队相关</span>
+    </div>
+   
+    <textarea  name="word" rows="5" cols="30" >
+    	
+    </textarea>
+
+    <input id="tupian"  class="input" style="display: none" type="file" name="img"></input>
+    <input id="picurl"  class="input" style="display: none" type="text" name="picurl"></input>
+    <div style="position: relative;">
+      <div style="line-height: 30px;float: left;margin-top: 20px;">上传头图:</div>
+      <div id="fileBtn"  >选择文件</div>
+      <div id="btn_img"  >上传</div>
+     </div>
+    <div id="btn_img_after"  >&nbsp;</div>
+    <input type="submit" class="wr_btn" id="btn_sub" value="发表博客"></input>
+   </form>
+ <div id="footer" style="">
+		<p>2012-2017 Creatshare.All rights reserved.</p>
+	</div>
+</body>
+<script type="text/javascript" src ="js/jquery-3.2.0.js"></script>
+<script type="text/javascript" src="ckeditor/ckeditor.js"></script>  
+<script type="text/javascript" src ="js/write.js"></script>
+</html>

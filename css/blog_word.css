@@ -1,0 +1,671 @@
+body{
+
+	margin:0px;
+	background-color: #fafafa;
+    font-family:Helvetica Neue,Helvetica,Arial,PingFang SC,Microsoft Yahei,Wenquanyi Micro Hei,sans-serif;
+}
+#search_input2{
+	border-radius: 25px;
+	/*background-color: #fff;*/
+	border: 1px solid #5a5a5a;
+	color: #5a5a5a;
+	font-size: 16px;
+}
+#footer{
+	width: 100%;
+	float: right;
+	margin-top: 64px;
+	margin-bottom: 32px;
+}
+#footer p{
+	margin:0 auto;
+	color: #333333;
+	font-size: 15px;
+	text-align: center;
+}
+/*窗口宽度大于1296px的情况*/
+	@media screen and (min-width: 1296px) {
+		
+/*导航栏样式部分*/
+#article_nav{
+   
+   width: 100%;height: 80px; 
+   font-size: 16px;
+   color:#333333;
+
+}
+#article_nav a{
+	color:#333333;
+	text-decoration: none;
+}
+#logo{
+	margin-left: 96px;
+	margin-top: 27.5px;
+	float: left;
+}
+#logo_img1{
+	display: inline;
+}
+#logo_img2{
+	display: none;
+}
+#nav-fenlei{
+	float: right;
+	margin-top: 30px;
+}
+#zhuzhan{
+	float: left;
+	margin-right: 64px;
+}
+#jishu{
+	float: left;
+	margin-right: 64px;
+}
+#chanpinsheji{
+	float: left;
+	margin-right: 64px;
+}
+#chanpinyunying{
+	float: left;
+	margin-right: 64px;
+}
+#tuanduixiangguan{
+	float: left;
+	
+}
+
+#search{
+	margin-top: 21px;
+	margin-right: 100px;
+	margin-left: 64px;
+	float: right;
+	width: 240px;
+
+}
+#search_input{
+	border-radius: 25px;
+	/*background-color: #fff;*/
+	border: 1px solid #5a5a5a;
+	color: #5a5a5a;
+	font-size: 16px;
+}
+
+#bokefenlei{
+	display: none;
+	}
+}
+#search img{
+	display: none;
+}
+
+/*窗口宽度小于1296px大于914px的情况*/
+	@media screen and (max-width: 1296px) and (min-width: 914px){
+		#jishu,#chanpinsheji,#chanpinyunying,#tuanduixiangguan{
+			display: none;
+		}
+		/*导航栏样式部分*/
+
+#article_nav{
+   
+   width: 100%;height: 80px; 
+   font-size: 16px;
+   color:#333333;
+
+}
+#article_nav a{
+	color:#333333;
+	text-decoration: none;
+}
+#logo{
+	margin-left: 96px;
+	margin-top: 32px;
+	float: left;
+}
+#logo_img1{
+	display: none;
+}
+#logo_img2{
+	display: inline;
+}
+#nav-fenlei{
+	float: right;
+	margin-top: 30px;
+}
+#zhuzhan{
+	float: left;
+	margin-right: 50px;
+}
+#search{
+	margin-top: 28px;
+	float: right;
+	
+
+}
+#search_input{
+	border-radius: 25px;
+	/*background-color: #fff;*/
+	border: 1px solid #5a5a5a;
+	color: #5a5a5a;
+	font-size: 16px;
+}
+#bokefenlei{
+	display: block;
+	float: left;
+	}
+#search_input{
+	display: none;
+}
+#search img{
+	display: inline;
+    margin-right: 16px;
+	margin-left: 50px;
+}
+}
+
+/*窗口宽度小于914px的情况*/
+	@media screen and (max-width: 914px) {
+		#jishu,#chanpinsheji,#chanpinyunying,#tuanduixiangguan{
+			display: none;
+		}
+		/*导航栏样式部分*/
+#article_nav{
+   
+   width: 100%;height: 80px; 
+   font-size: 16px;
+   color:#333333;
+
+}
+#article_nav a{
+	color:#333333;
+	text-decoration: none;
+}
+#logo{
+	margin-left: 26px;
+	margin-top: 32px;
+	float: left;
+}
+#logo_img1{
+	display: none;
+}
+#logo_img2{
+	display: inline;
+}
+#nav-fenlei{
+	float: right;
+	margin-top: 30px;
+}
+#zhuzhan{
+	float: left;
+	margin-right: 50px;
+}
+#search{
+	margin-top: 28px;
+	float: right;
+	
+
+}
+#search_input{
+	border-radius: 25px;
+	/*background-color: #fff;*/
+	border: 1px solid #5a5a5a;
+	color: #5a5a5a;
+	font-size: 16px;
+}
+#bokefenlei{
+	display: block;
+	float: left;
+	}
+#search_input{
+	display: none;
+}
+#search img{
+	display: inline;
+    margin-right: 16px;
+	margin-left: 50px;
+}
+}
+
+/*头图标题及正文样式*/
+
+/*窗口宽度大于1296px的情况*/
+	@media screen and (min-width: 1296px) {
+       #toutubiaoti{
+       	   width: 100%;
+       	   height: 360px;
+       	   /*background-image: url(../images/toutu.png);*/
+       	   color: #ffffff;
+       }
+       #toutubiaoti_box{
+       	  width: 624px;
+       	  height: 100%;
+       	  margin: 0 auto;
+       	  padding-top:110px; 
+       }
+       #bowenbiaoti{
+       	 
+       	 font-size: 32px;
+       	 /*margin-top: 110px;*/
+       }
+       #bowen_zuozhe{
+         margin-top: 48px;
+       }
+       #bowen_shijian{
+       	 margin-left: 30px;
+       }
+       #zuozheshijian{
+       	margin-top: 48px;
+       	font-size: 16px;
+       }
+       #shoucangdianzan{
+       	margin-top: 32px;
+       	font-size: 16px;
+       }
+
+       #zhengwen{
+       	width: 624px;
+       	margin:0 auto;
+       	font-size: 20px;
+       	color: #333333;
+       }
+       #zhengwen img{
+       	display: block;
+       	width: 480px;
+       	height: 360px;
+       	margin:0 auto;
+       }
+       #fenxiang{
+         width: 624px;
+         margin:0 auto;
+         margin-top: 80px;
+       }
+       #fenxiang img {
+       	margin-right: 48px;
+       }
+       #pinglun{
+       	width: 624px;
+         margin:0 auto;
+         margin-top: 32px;
+
+       }
+       .liuyanban{
+        width: 584px;
+         margin:0 auto;
+        min-height: 80px;
+        padding: 20px;
+        color: #5a5a5a;
+       }
+       /*文本框样式*/
+       #pinglun_input1{
+       	width: 280px;
+       	height: 30px;
+       	margin-right: 50px;
+       	border: 1px solid #5a5a5a;
+       	color: #333333;
+       	font-size: 16px;
+       }
+        #pinglun_input2{
+       	width: 280px;
+       	height: 30px;
+       	border: 1px solid #5a5a5a;
+       	color: #333333;
+       	font-size: 16px;
+       }
+       #pinglun_input3{
+       	width: 610px;
+       	height: 100px;
+       	margin-top:16px;
+       	border: 1px solid #5a5a5a;
+       	color: #333333;
+       	font-size: 16px;
+       }
+       #pinglun_btn{
+       	/*display: block;*/
+       	margin-top: 0px;
+       	background-color: #5a5a5a;
+       	color: #fff;
+       	border: 0px;
+       	float: right;
+       	/*margin-right: 10px;*/
+       	width: 72px;
+       	height: 32px;
+       	font-size: 20px;
+       }
+	}
+
+/*窗口宽度小于1296px大于914px的情况*/
+	@media screen and (max-width: 1296px) and (min-width: 914px){
+      #toutubiaoti{
+       	   width: 100%;
+       	   height: 256px;
+       	   /*background-image: url(../images/toutu.png);*/
+       	   color: #ffffff;
+       }
+        #toutubiaoti_box{
+       	  width: 624px;
+       	  height: 100%;
+       	  margin: 0 auto;
+       	  padding-top:48px; 
+       }
+        #bowenbiaoti{
+       	 
+       	 font-size: 32px;
+       	 /*margin-top: 40px;*/
+       }
+       #bowen_zuozhe{
+         margin-top: 48px;
+       }
+       #bowen_shijian{
+       	 margin-left: 30px;
+       }
+       #zuozheshijian{
+       	margin-top: 48px;
+       	font-size: 16px;
+       }
+       #shoucangdianzan{
+       	margin-top: 32px;
+       	font-size: 16px;
+       }
+         #zhengwen{
+       	width: 624px;
+       	margin:0 auto;
+       	font-size: 16px;
+       	color: #333333;
+       }
+       #zhengwen img{
+       	display: block;
+       	width: 480px;
+       	height: 360px;
+       	margin:0 auto;
+       }
+        #fenxiang{
+         width: 624px;
+         margin:0 auto;
+         margin-top: 80px;
+       }
+       #fenxiang img {
+       	margin-right: 48px;
+       }
+        #pinglun{
+       	width: 624px;
+         margin:0 auto;
+         margin-top: 32px;
+       }
+       .liuyanban{
+        width: 584px;
+         margin:0 auto;
+        min-height: 80px;
+        padding: 20px;
+        color: #5a5a5a;
+       }
+        /*文本框样式*/
+       #pinglun_input1{
+       	width: 280px;
+       	height: 30px;
+       	margin-right: 50px;
+       	border: 1px solid #5a5a5a;
+       	color: #333333;
+       	font-size: 16px;
+       }
+        #pinglun_input2{
+       	width: 280px;
+       	height: 30px;
+       	border: 1px solid #5a5a5a;
+       	color: #333333;
+       	font-size: 16px;
+       }
+       #pinglun_input3{
+       	width: 610px;
+       	height: 100px;
+       	margin-top:16px;
+       	border: 1px solid #5a5a5a;
+       	color: #333333;
+       	font-size: 16px;
+       }
+      
+        #pinglun_btn{
+       	/*display: block;*/
+       	margin-top: 0px;
+       	background-color: #5a5a5a;
+       	color: #fff;
+       	border: 0px;
+       	float: right;
+       	/*margin-right: 10px;*/
+       	width: 72px;
+       	height: 32px;
+       	font-size: 20px;
+       }
+	}
+
+/*窗口宽度小于914px的情况*/
+	@media screen and (max-width: 914px) {
+       #toutubiaoti{
+       	   width: 100%;
+       	   height: 176px;
+       	   /*background-image: url(../images/toutu.png);*/
+       	   color: #ffffff;
+       }
+        #toutubiaoti_box{
+       	  width: 624px;
+       	  height: 100%;
+       	  margin: 0 auto;
+       	  padding-top:32px; 
+       }
+        #bowenbiaoti{
+       	 
+       	 font-size: 32px;
+       	 /*margin-top: 32px;*/
+       	 margin-left: 32px;
+       }
+       #bowen_zuozhe{
+         margin-top: 48px;
+         margin-left: 32px;
+       }
+       #bowen_shijian{
+       	 margin-left: 30px;
+       }
+       #zuozheshijian{
+       	margin-top: 32px;
+       	font-size: 16px;
+       }
+       #shoucangdianzan{
+       	margin-top: 16px;
+       	font-size: 16px;
+       	margin-left: 32px;
+       }
+         #zhengwen{
+       	/*width: 624px;*/
+       	/*margin:0 auto;*/
+       	margin-left: 32px;
+       	margin-right: 32px;
+       	font-size: 16px;
+       	color: #333333;
+       }
+       #zhengwen img{
+       	display: block;
+       	max-width: 480px;
+       	width: 100%;
+       	/*height: 360px;*/
+       	margin:0 auto;
+       }
+        #fenxiang{
+         /*width: 624px;*/
+         min-width: 500px;
+         margin-left: 32px;
+         margin-right: 32px;
+         /*margin:0 auto;*/
+         margin-top: 80px;
+       }
+       #fenxiang img {
+       	margin-right: 48px;
+       }
+        #pinglun{
+       	max-width: 624px;
+         margin-right: 32px;
+       	 margin-left: 32px;
+        
+         margin-top: 32px;
+       }
+        .liuyanban{
+        max-width: 584px;
+         margin-right: 32px;
+         margin-left: 32px;
+        
+         margin-top: 32px;
+         min-height: 80px;
+         padding: 20px;
+         color: #5a5a5a;
+       }
+        /*文本框样式*/
+       #pinglun_input1{
+       	display: block;
+       	margin-bottom: 16px;
+       	/*margin-left: 32px;*/
+       	width: 100%;
+       	max-width: 300px;
+       	height: 30px;
+       	border: 1px solid #5a5a5a;
+       	color: #333333;
+       	font-size: 16px;
+       }
+        #pinglun_input2{
+        display: block;
+       	width: 100%;
+       	max-width: 300px;
+       	height: 30px;
+       	border: 1px solid #5a5a5a;
+       	color: #333333;
+       	font-size: 16px;
+       	/*margin-left: 32px;*/
+       }
+       #pinglun_input3{
+       	width: 100%;
+       	/*max-width: 610px;*/
+       	margin-right: 32px;
+       	height: 100px;
+       	margin-top:16px;
+       	border: 1px solid #5a5a5a;
+       	color: #333333;
+       	font-size: 16px;
+       }
+      
+        #pinglun_btn{
+       	/*display: block;*/
+       	margin-top: 0px;
+       	background-color: #5a5a5a;
+       	color: #fff;
+       	border: 0px;
+       	float: right;
+       	/*margin-right: 10px;*/
+       	width: 72px;
+       	height: 32px;
+       	font-size: 20px;
+       }
+	}
+
+/*-----点击回复按钮后弹出的回复表单的样式-----*/
+  
+/*窗口宽度大于914px的情况*/
+  @media screen and (min-width: 914px){
+      #form_huifu{
+        width: 95%;
+         margin:0 auto;
+         margin-top: 30px;
+      
+     }
+    #form_huifu_input1{
+       
+        width: 220px;
+        display: inline-block;
+        margin-right: 40px;
+        height: 30px;
+        border: 1px solid #5a5a5a;
+        color: #333333;
+        font-size: 16px;
+        margin-bottom: 16px;
+     }
+  #form_huifu_input2{
+       float: right;
+        width: 220px;
+        display: inline-block;
+        
+        height: 30px;
+        border: 1px solid #5a5a5a;
+        color: #333333;
+        font-size: 16px;
+        margin-bottom: 16px;
+  }
+  #form_huifu textarea{
+     width: 100%;
+     min-height:80px;
+  }
+
+
+
+ }
+
+/*窗口宽度小于914px的情况*/
+  @media screen and (max-width: 914px) {
+ #form_huifu{
+        width: 95%;
+         margin:0 auto;
+         margin-top: 30px;
+        
+  }
+   #form_huifu_input1{
+       width: 100%;
+        max-width: 280px;
+        display: block;
+        margin-right: 40px;
+        height: 30px;
+        border: 1px solid #5a5a5a;
+        color: #333333;
+        font-size: 16px;
+        margin-bottom: 16px;
+  }
+  #form_huifu_input2{
+       width: 100%;
+        max-width: 280px;
+        display: block;
+        
+        height: 30px;
+        border: 1px solid #5a5a5a;
+        color: #333333;
+        font-size: 16px;
+        margin-bottom: 16px;
+  }
+  #form_huifu textarea{
+     width: 100%;
+     min-height:80px;
+  }
+  }
+  #huifu_btn{
+       float: right;
+       
+        background-color: #5a5a5a;
+        color: #fff;
+        border: 0px;
+               
+        width: 72px;
+        height: 32px;
+        font-size: 20px;  
+   }
+   #textarea_zishu2{
+        float: right;
+
+        font-size: 12px;
+        color: #5a5a5a;
+        margin-right: 16px;
+        line-height: 20px;
+        
+   }
+
+
+.huifuban{
+  border:1px solid #5a5a5a;
+  color: #5a5a5a;
+  margin-top:16px;
+  padding: 20px;
+}
+#liuyanban_box{
+  margin-top: 30px;
+}

@@ -1,0 +1,288 @@
+<!doctype html>  
+<html lang="en">  
+    <head>  
+        <!--网站编码格式，UTF-8 国际编码，GBK或 gb2312 中文编码-->  
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />  
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+        <meta name="Keywords" content="关键词一，关键词二">  
+        <meta name="Description" content="网站描述内容">  
+        <meta name="Author" content="Yvette Lau">  
+        <meta name = "viewport" content = " width = device-width, initial-scale = 1 ">          
+        <title>注册</title>  
+        <style>  
+            *{  
+                margin: 0px;  
+                padding: 0px;  
+            }  
+            /*布局开始*/  
+            #login_dialog {  
+                position: fixed;  
+                left: 40%;  
+                top: 40%;  
+                background-color: #303a40;  
+                width: 500px;  
+                margin-left: -200px;  
+                margin-top: -150px;  
+                font-family: "黑体";  
+                /*禁止复制粘贴*/  
+                -moz-user-select: none;  
+                -webkit-user-select: none;  
+                user-select:none;  
+            }  
+            .register_dialog_title {  
+                height: 35px;  
+                line-height: 35px;  
+                margin: 0 5px;  
+            }  
+  
+            .register_dialog_info {  
+                float: left;  
+                margin-left:10px;  
+                color: #fff;  
+                margin-top: 5px;  
+                font-size: 20px;  
+            }  
+            #register_dialog {  
+                position: fixed;  
+                left: 40%;  
+                top: 40%;  
+                background-color: #303a40;  
+                width: 500px;  
+            /*  height: 600px; */  
+                margin-left: -200px;  
+                margin-top: -200px;  
+                font-family: "黑体";  
+                -moz-user-select:none; /*火狐*/  
+                -webkit-user-select:none; /*webkit浏览器*/  
+                -ms-user-select:none; /*IE10*/  
+                -khtml-user-select:none; /*早期浏览器*/  
+                user-select:none;  
+            }  
+  
+            .register_dialog_info {  
+                float: left;  
+                margin-left:10px;  
+                color: #fff;  
+                margin-top: 5px;  
+                font-size: 20px;  
+            }  
+            .dialog_close {  
+                cursor: pointer;  
+                width: 40px;  
+                height:40px;  
+                border-radius:25px;  
+                float: right;  
+                line-height:40px;  
+                font-size: 20px;  
+                color: #d8dadb;  
+                font-family: "微软雅黑";  
+                text-align: center;  
+                cursor:center;  
+            }  
+            form{padding: 20px 0px;}  
+            ul li {list-style: none;}  
+            .sub {  
+                text-align: center;  
+            }  
+            .sub input {  
+                display: inline-block;  
+                width: 300px;  
+                background-color: rgb(255, 109, 11);  
+                color: rgb(255, 255, 255);  
+                font-size: 20px;  
+                text-align: center;  
+                height: 40px;  
+                line-height: 40px;  
+                font-family: 黑体;  
+                outline: none;  
+                border: none;  
+                margin: auto;  
+            }  
+            .dialog_close:hover {  
+                background-color: #566  
+            }  
+            input[type = "submit"]:hover{cursor: pointer;}  
+            /*布局结束*/  
+            .reg-box { padding-left: 30px; }  
+  
+            .reg-box li { line-height: 44px; width: 500px; overflow: hidden; }  
+  
+            .reg-box li label { width: 68px; height: 50px; float: left; line-height: 50px; text-align: right; padding-right: 20px; }  
+  
+            .reg-box li input,.reg-box li select{ padding: 6px 0; font-size: 16px; width: 296px; height: 28px; line-height: 28px; border: 1px solid #dddddd; text-indent: 0.5em; float: left; }  
+  
+            .reg-box li select option{font-size:16px;}  
+  
+            .registered .btn a { background: #ff7200; margin-left: 110px; }  
+              
+            /*验证码*/  
+            .add { width: 128px; height: 44px; float: left; _display: inline; cursor: pointer; margin-left: 20px; }  
+  
+            .reg-box li .sradd { width: 148px; text-indent: 4px; font-size: 14px; }  
+  
+            .reg-box li .input-code { width: 106px; padding: 10px; font-family: Arial; font-style: italic; color: red; letter-spacing: 1px; cursor: pointer; text-align: center; text-indent: 0; }  
+  
+            .yzm,.phoKey { background: #ff7200; text-align: center; line-height: 44px; color: #fff; }  
+  
+            .phoKey{letter-spacing: 3px; font-size:18px;}  
+  
+            .yzmc { background: #dddddd; text-align: center; line-height: 44px; color: #999; }  
+  
+            .error { clear:both;display:block;color: red; padding-left: 90px; padding-bottom:5px;height:20px;float: left; font-size:12px;line-height: 20px;}  
+  
+            input { background-color: #fff; outline: none; }  
+  
+            .reg-box li { width: auto; }  
+  
+            .reg-box li input.errorC, .errorC{ border: 1px solid red; }  
+  
+            .reg-box li input.checkedN , .checkedN{ border: 1px solid #1ece6d; }  
+              
+        </style>  
+        <!--css js 文件的引入-->  
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+    </head>  
+
+    <body> 
+
+       <div id="register_dialog">  
+        <div class="register_dialog_title">  
+            <p class="register_dialog_info">注册</p>  
+            <!-- <p class="dialog_close">X</p> -->
+           
+            <div class="clear"></div>  
+        </div>  
+        <div style="background-color:#ffffff;margin:10px;">  
+                <form  id="form1">  
+                        <ul class="reg-box">                   
+                            <li>  
+                                <label for="">账 号</label><input id="zhanghao" name="user" type="text"  class="phone" maxlength="12" style="color:#999;" /><span id="zhanghao_after" class="error error1"></span>  
+                            </li>  
+                                                    
+                            <li>  
+                                <label for="">密    码</label><input id="mima" name="password" type="password"  class = "password"  style="color:#999;" /><span id="mima_after" class="error error3"></span>  
+                            </li>  
+                            <li>  
+                                <label for="">确认密码</label><input id="rmima" type="password"  class = "email"  style="color:#999;" /><span id="rmima_after" class="error error4"></span>  
+                            </li>  
+                        </ul>  
+                <div class="sub">  
+                    <input type="button" id="btn_sub" value="立即注册" />  
+                      
+                </div>  
+                  
+            </form>  
+        </div>  
+    </div>  
+    </body>
+<script type="text/javascript">
+    // 去掉字符串首尾空格
+String.prototype.trim = function()
+{
+   
+   return this.replace(/(^\s*)|(\s*$)/g, "");
+}
+document.getElementById('zhanghao').onblur = function(){
+
+    if(this.value.trim()==''){
+        document.getElementById('zhanghao_after').innerHTML = '账号不能为空';
+    }
+    else{
+        document.getElementById('zhanghao_after').innerHTML = '';
+    }
+ }
+document.getElementById('mima').onblur = function(){
+
+    if(this.value.trim()==''){
+        document.getElementById('mima_after').innerHTML = '密码不能为空';
+    }
+    else{
+        document.getElementById('mima_after').innerHTML = '';
+    }
+ }
+document.getElementById('rmima').onblur = function(){
+
+    if(this.value.trim()==''){
+        document.getElementById('rmima_after').innerHTML = '密码不能为空';
+    }
+    else{
+        document.getElementById('rmima_after').innerHTML = '';
+    }
+ }
+
+// document.getElementById('form1').onsubmit = function(){
+//     if(document.getElementById('zhanghao').value.trim()==''||document.getElementById('mima').value.trim()==''||document.getElementById('rmima').value.trim()==''||document.getElementById('rmima').value.trim()==''){
+//         alert('请填写完整数据');
+//         return false;
+//     }
+//    if(document.getElementById('mima').value.trim()!=document.getElementById('rmima').value.trim()){
+//        alert('两次密码不一致');
+//         return false;
+//    }
+//    //提交前去掉字符串首尾空格
+//    document.getElementById('zhanghao').value = document.getElementById('zhanghao').value.trim();
+//    document.getElementById('mima').value = document.getElementById('mima').value.trim();
+//    return true;
+// }
+
+//验证一个字符串只能有数字
+function MY_onlyhavenumber(str){
+     var box = /^[0-9]+$/g; 
+     if(box.test(str)){
+      return true;
+     }
+     else{
+      return false;
+     }
+}
+
+//ajax提交数据
+document.getElementById('btn_sub').onclick = function(){
+
+     if(document.getElementById('zhanghao').value.trim()==''||document.getElementById('mima').value.trim()==''||document.getElementById('rmima').value.trim()==''||document.getElementById('rmima').value.trim()==''){
+        alert('请填写完整数据');
+        return false;
+    }
+   if(document.getElementById('mima').value.trim()!=document.getElementById('rmima').value.trim()){
+       alert('两次密码不一致');
+        return false;
+   }
+  if (MY_onlyhavenumber(document.getElementById('zhanghao').value)) {
+    // alert('true')
+  }
+  else{
+    alert('格式错误，账号只能为数字不能含有其他字符');
+    return false;
+  }
+      $.ajax({
+            type:'get',
+            url:'http://139.199.106.88:8080/blog_war/Logon',
+            dataType:'json', //返回的数据类型
+            data:$.param(
+                {
+                    user:document.getElementById('zhanghao').value.trim(),
+                    password:document.getElementById('mima').value.trim()
+                 }
+                 ),
+            success:function(response,status,xhr){
+                console.log('----注册接口请求成功');
+                console.log(response.message);
+                if(response.message==false){
+                    alert('该账号已存在');
+                    // return false;
+                 }
+               else if(response.message==true){
+                 window.open("login.html","_top");
+                 
+
+                 }           
+            },
+            error:function(xhr,errorText,errorType){
+                console.log('----注册接口请求失败');
+                console.log(xhr);
+                alert('0');
+            }
+        });
+}
+</script>
+</html>  
