@@ -49,8 +49,8 @@ function img_send(){
 	 	}
 	 	//若文件是图片 上传文件
 	 	if (isimg(path)==1) {
-	 		  var formData = new FormData($( "#form" )[0]);  
-        
+	 		  var formData = new FormData($( "#form" )[0]); 
+        console.log(formData);
        $.ajax({
 	 		  type:'post',
 	 		  url:'http://139.199.106.88:8080/blog_war/HeadPicServlet',
