@@ -30,12 +30,12 @@
 			$(function(){
 	var count=0;
 	var pagestart=0;
-	var pagesize=12;
+	var pagesize=13;
 	getdata(pagestart,pagesize);  //主要实现函数
 				
 	$(document).on('click','.btn',function(){
 		count++;
-		pagestart=count*pagesize;
+		pagestart=count*12;
 		getdata(pagestart,pagesize);
 	});
 });

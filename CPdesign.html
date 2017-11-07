@@ -9,7 +9,6 @@
 		<link rel="stylesheet" href="css/CPdesign.css" />
 		<link rel="stylesheet" href="css/init.css" />
 		<script type="text/javascript" src="js/blog-nav.js"></script>
-		
 		<script type="text/html" id="arttep">
 			{{each result as value}}
 			<a href="article.html?{{value.id}}">
@@ -17,7 +16,6 @@
 						<img id="pps" src="{{value.url}}" />
 						<div class="card">
 							<p>{{value.title}}</p>
-						
 							<span class="typer">{{value.name}}</span>
 							<span class="date">{{value.time}}</span>
 						</div>
@@ -30,12 +28,12 @@
 			$(function(){
 	var count=0;
 	var pagestart=0;
-	var pagesize=12;
+	var pagesize=13;
 	getdata(pagestart,pagesize);  //主要实现函数
 				
 	$(document).on('click','.btn',function(){
 		count++;
-		pagestart=count*pagesize;
+		pagestart=count*12;
 		getdata(pagestart,pagesize);
 	});
 });
